@@ -1,8 +1,7 @@
 <template>
     <div>
-        <h2>I Am a List of Students</h2>
-        <div v-for="student in $store.getters.students">
-            <Student :student="student" />
+        <div class="student-list-wrapper">
+            <Student  v-for="student in $store.getters.students" :student="student" />
         </div>
     </div>
 </template>
@@ -32,5 +31,9 @@ import Student from './Student.vue'
 </script>
 
 <style scoped>
-
+    .student-list-wrapper { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 </style>
